@@ -1,0 +1,219 @@
+[
+  {
+    "type": "directory",
+    "path": "materialien/00 Aktuelles"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/01 Themen und Termine"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/01 Themen und Termine/01 Organisation"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/01 Themen und Termine/01 Organisation/Apps"
+  },
+  {
+    "type": "file",
+    "path": "materialien/01 Themen und Termine/01 Organisation/Apps/index.html",
+    "filename": "index.html",
+    "size": 1767,
+    "mime": "text/html"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/01 Themen und Termine/01 Organisation/Bildungsplan"
+  },
+  {
+    "type": "file",
+    "path": "materialien/01 Themen und Termine/01 Organisation/Bildungsplan/22-TB02-Inhalt-Band-1-AF-3-2-Physik-2026.pdf",
+    "filename": "22-TB02-Inhalt-Band-1-AF-3-2-Physik-2026.pdf",
+    "size": 1088921,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/02 SI-Einheiten"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/02 SI-Einheiten/01 Physikalische Begriffe und Basiseinheiten"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/01 Physikalische Begriffe und Basiseinheiten/Physikalische_Begriffe.pdf",
+    "filename": "Physikalische_Begriffe.pdf",
+    "size": 165166,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/02 SI-Einheiten/02 SI-Präfixe"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/02 SI-Präfixe/SI_Basiseinheiten_Prafix.pdf",
+    "filename": "SI_Basiseinheiten_Prafix.pdf",
+    "size": 105958,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/02 SI-Einheiten/03 Übungen"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/03 Übungen/Einheiten_Prafix.html",
+    "filename": "Einheiten_Prafix.html",
+    "size": 13178,
+    "mime": "text/html"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/03 Übungen/Memory_SI_Basiseinheiten.html",
+    "filename": "Memory_SI_Basiseinheiten.html",
+    "size": 13167,
+    "mime": "text/html"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/03 Übungen/Zuordnen_Einheit_Prafix.html",
+    "filename": "Zuordnen_Einheit_Prafix.html",
+    "size": 14697,
+    "mime": "text/html"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/02 SI-Einheiten/04 Grundlagen Vektoren"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/04 Grundlagen Vektoren/NEW2_TESTDATEI.pdf",
+    "filename": "NEW2_TESTDATEI.pdf",
+    "size": 8800521,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "file",
+    "path": "materialien/02 SI-Einheiten/04 Grundlagen Vektoren/PH_TGM11_Vektoren_Einfuhrung.pdf",
+    "filename": "PH_TGM11_Vektoren_Einfuhrung.pdf",
+    "size": 239430,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/03 Kinematik"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm"
+  },
+  {
+    "type": "file",
+    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/NEW_TESTDATEI.pdf",
+    "filename": "NEW_TESTDATEI.pdf",
+    "size": 8800521,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "file",
+    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/Ort_Test_Datei.pdf",
+    "filename": "Ort_Test_Datei.pdf",
+    "size": 8800521,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "file",
+    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/PH_TGM11_Ort_Zeit_Diagramm.pdf",
+    "filename": "PH_TGM11_Ort_Zeit_Diagramm.pdf",
+    "size": 305513,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/03 Kinematik/02 Weg-Zeit-Diagramm"
+  },
+  {
+    "type": "file",
+    "path": "materialien/03 Kinematik/02 Weg-Zeit-Diagramm/PH_TGM11_Weg_Zeit_Diagramm.pdf",
+    "filename": "PH_TGM11_Weg_Zeit_Diagramm.pdf",
+    "size": 106574,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/03 Kinematik/03 Gleichförmige Bewegung"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/03 Kinematik/04 Beschleunigte Bewegung"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/04 Impuls und Kraft"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/04 Impuls und Kraft/01 Trägheit und Wechselwirkungsprinzip"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/04 Impuls und Kraft/02 Elastischer Stoß"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/04 Impuls und Kraft/03 Inelastischer Stoß"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/04 Impuls und Kraft/04 Kräfte"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/05 Energie und Leistung"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/05 Energie und Leistung/01 Energieerhaltung"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/05 Energie und Leistung/02 Energieumwandlung"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/05 Energie und Leistung/03 Leistung"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/06 Relativitätstheorie"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/07 Klassenarbeiten"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/07 Klassenarbeiten/01 Materialsammlung"
+  },
+  {
+    "type": "file",
+    "path": "materialien/07 Klassenarbeiten/01 Materialsammlung/Ph_Dokument_mit_physikalischen_Formeln_07_2024.pdf",
+    "filename": "Ph_Dokument_mit_physikalischen_Formeln_07_2024.pdf",
+    "size": 3455633,
+    "mime": "application/pdf"
+  },
+  {
+    "type": "directory",
+    "path": "materialien/07 Klassenarbeiten/02 Klassenarbeitensammlung"
+  },
+  {
+    "type": "file",
+    "path": "materialien/README.md",
+    "filename": "README.md",
+    "size": 777,
+    "mime": "text/markdown"
+  }
+]

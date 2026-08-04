@@ -1,0 +1,49 @@
+ANKÜNDIGUNG EINTRAGEN
+
+1. verwaltung/ankuendigungen.json öffnen.
+2. Den Beispielblock kopieren.
+3. "active": true setzen.
+4. Titel, Datum und Text ändern.
+5. Commit changes drücken.
+
+Die neuesten Ankündigungen stehen automatisch oben.
+Mit "active": false wird eine Meldung ausgeblendet.
+
+
+MATERIAL HOCHLADEN
+
+1. materialien/ öffnen.
+2. Thema und Unterthema öffnen.
+3. Add file -> Upload files.
+4. Datei hochladen und Commit changes drücken.
+
+PDF / Bild / Video / einzelne HTML-Übung:
+Direkt in den passenden Unterthemenordner laden.
+
+Simulation mit mehreren Dateien:
+Eigenen Ordner anlegen. Die Startdatei muss index.html heißen.
+
+
+NEUEN ORDNER ANLEGEN
+
+Beispiel:
+materialien/08 Quantenphysik/01 Grundlagen/
+
+Die Nummer bestimmt die Reihenfolge und wird auf der Seite ausgeblendet.
+Für einen leeren Ordner eine Datei namens .gitkeep hinzufügen.
+Neue Ordner werden beim nächsten GitHub-Pages-Aufbau automatisch erkannt.
+
+
+MATERIAL ODER LINK ENTFERNEN
+
+Datei, Simulationsordner oder Eintrag aus links.json löschen und committen.
+Der Eintrag verschwindet nach der automatischen Veröffentlichung.
+
+
+KLASSENARBEITEN
+
+Allgemeine Materialien:
+materialien/07 Klassenarbeiten/01 Materialsammlung/
+
+Frühere Klassenarbeiten und Probeklausuren:
+materialien/07 Klassenarbeiten/02 Klassenarbeitensammlung/

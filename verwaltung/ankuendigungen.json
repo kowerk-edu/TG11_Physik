@@ -1,0 +1,11 @@
+[
+  {
+    "active": false,
+    "title": "Beispiel: Neue Ankündigung",
+    "date": "2026-09-14",
+    "text": "Diesen Eintrag kopieren, den Text ändern und active auf true setzen.",
+    "important": true,
+    "link": "",
+    "linkText": "Mehr erfahren"
+  }
+]
