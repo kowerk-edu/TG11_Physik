@@ -145,7 +145,8 @@ python3 tools/check_internal_links.py .
 
 Alles im öffentlichen Repository und auf der GitHub-Pages-Seite ist öffentlich
 abrufbar. Vor dem Hochladen personenbezogene Daten und Materialien ohne
-Veröffentlichungsrecht entfernen.
+Veröffentlichungsrecht entfernen. 
+
 
 ### Suche
 
