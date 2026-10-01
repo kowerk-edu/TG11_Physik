@@ -4,6 +4,13 @@
     "path": "materialien/00 Aktuelles"
   },
   {
+    "type": "file",
+    "path": "materialien/00 Aktuelles/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
     "type": "directory",
     "path": "materialien/01 Themen und Termine"
   },
@@ -43,10 +50,10 @@
   },
   {
     "type": "file",
-    "path": "materialien/02 SI-Einheiten/01 Physikalische Begriffe und Basiseinheiten/Physikalische_Begriffe.pdf",
-    "filename": "Physikalische_Begriffe.pdf",
-    "size": 165166,
-    "mime": "application/pdf"
+    "path": "materialien/02 SI-Einheiten/01 Physikalische Begriffe und Basiseinheiten/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -54,10 +61,10 @@
   },
   {
     "type": "file",
-    "path": "materialien/02 SI-Einheiten/02 SI-Präfixe/SI_Basiseinheiten_Prafix.pdf",
-    "filename": "SI_Basiseinheiten_Prafix.pdf",
-    "size": 105958,
-    "mime": "application/pdf"
+    "path": "materialien/02 SI-Einheiten/02 SI-Präfixe/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -90,17 +97,10 @@
   },
   {
     "type": "file",
-    "path": "materialien/02 SI-Einheiten/04 Grundlagen Vektoren/NEW2_TESTDATEI.pdf",
-    "filename": "NEW2_TESTDATEI.pdf",
-    "size": 8800521,
-    "mime": "application/pdf"
-  },
-  {
-    "type": "file",
-    "path": "materialien/02 SI-Einheiten/04 Grundlagen Vektoren/PH_TGM11_Vektoren_Einfuhrung.pdf",
-    "filename": "PH_TGM11_Vektoren_Einfuhrung.pdf",
-    "size": 239430,
-    "mime": "application/pdf"
+    "path": "materialien/02 SI-Einheiten/04 Grundlagen Vektoren/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -112,24 +112,10 @@
   },
   {
     "type": "file",
-    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/NEW_TESTDATEI.pdf",
-    "filename": "NEW_TESTDATEI.pdf",
-    "size": 8800521,
-    "mime": "application/pdf"
-  },
-  {
-    "type": "file",
-    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/Ort_Test_Datei.pdf",
-    "filename": "Ort_Test_Datei.pdf",
-    "size": 8800521,
-    "mime": "application/pdf"
-  },
-  {
-    "type": "file",
-    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/PH_TGM11_Ort_Zeit_Diagramm.pdf",
-    "filename": "PH_TGM11_Ort_Zeit_Diagramm.pdf",
-    "size": 305513,
-    "mime": "application/pdf"
+    "path": "materialien/03 Kinematik/01 Ort-Zeit-Diagramm/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -137,18 +123,39 @@
   },
   {
     "type": "file",
-    "path": "materialien/03 Kinematik/02 Weg-Zeit-Diagramm/PH_TGM11_Weg_Zeit_Diagramm.pdf",
-    "filename": "PH_TGM11_Weg_Zeit_Diagramm.pdf",
-    "size": 106574,
-    "mime": "application/pdf"
+    "path": "materialien/03 Kinematik/02 Weg-Zeit-Diagramm/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
     "path": "materialien/03 Kinematik/03 Gleichförmige Bewegung"
   },
   {
+    "type": "file",
+    "path": "materialien/03 Kinematik/03 Gleichförmige Bewegung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
     "type": "directory",
     "path": "materialien/03 Kinematik/04 Beschleunigte Bewegung"
+  },
+  {
+    "type": "file",
+    "path": "materialien/03 Kinematik/04 Beschleunigte Bewegung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
+    "type": "file",
+    "path": "materialien/03 Kinematik/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -159,16 +166,51 @@
     "path": "materialien/04 Impuls und Kraft/01 Trägheit und Wechselwirkungsprinzip"
   },
   {
+    "type": "file",
+    "path": "materialien/04 Impuls und Kraft/01 Trägheit und Wechselwirkungsprinzip/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
     "type": "directory",
     "path": "materialien/04 Impuls und Kraft/02 Elastischer Stoß"
+  },
+  {
+    "type": "file",
+    "path": "materialien/04 Impuls und Kraft/02 Elastischer Stoß/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
     "path": "materialien/04 Impuls und Kraft/03 Inelastischer Stoß"
   },
   {
+    "type": "file",
+    "path": "materialien/04 Impuls und Kraft/03 Inelastischer Stoß/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
     "type": "directory",
     "path": "materialien/04 Impuls und Kraft/04 Kräfte"
+  },
+  {
+    "type": "file",
+    "path": "materialien/04 Impuls und Kraft/04 Kräfte/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
+    "type": "file",
+    "path": "materialien/04 Impuls und Kraft/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -179,16 +221,51 @@
     "path": "materialien/05 Energie und Leistung/01 Energieerhaltung"
   },
   {
+    "type": "file",
+    "path": "materialien/05 Energie und Leistung/01 Energieerhaltung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
     "type": "directory",
     "path": "materialien/05 Energie und Leistung/02 Energieumwandlung"
+  },
+  {
+    "type": "file",
+    "path": "materialien/05 Energie und Leistung/02 Energieumwandlung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
     "path": "materialien/05 Energie und Leistung/03 Leistung"
   },
   {
+    "type": "file",
+    "path": "materialien/05 Energie und Leistung/03 Leistung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
+    "type": "file",
+    "path": "materialien/05 Energie und Leistung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
     "type": "directory",
     "path": "materialien/06 Relativitätstheorie"
+  },
+  {
+    "type": "file",
+    "path": "materialien/06 Relativitätstheorie/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
   },
   {
     "type": "directory",
@@ -211,9 +288,16 @@
   },
   {
     "type": "file",
+    "path": "materialien/07 Klassenarbeiten/02 Klassenarbeitensammlung/ordner.txt",
+    "filename": "ordner.txt",
+    "size": 54,
+    "mime": "text/plain"
+  },
+  {
+    "type": "file",
     "path": "materialien/README.md",
     "filename": "README.md",
-    "size": 777,
+    "size": 936,
     "mime": "text/markdown"
   }
 ]

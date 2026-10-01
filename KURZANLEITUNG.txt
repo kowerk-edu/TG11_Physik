@@ -1,49 +1,38 @@
-ANKÜNDIGUNG EINTRAGEN
+SO EINFACH GEHT ES
 
-1. verwaltung/ankuendigungen.json öffnen.
-2. Den Beispielblock kopieren.
-3. "active": true setzen.
-4. Titel, Datum und Text ändern.
-5. Commit changes drücken.
+Auf der Kursseite unten auf „Kurs verwalten“ klicken:
+https://kowerk-edu.github.io/TG11_Physik/verwaltung/
 
-Die neuesten Ankündigungen stehen automatisch oben.
-Mit "active": false wird eine Meldung ausgeblendet.
-
-
-MATERIAL HOCHLADEN
-
-1. materialien/ öffnen.
-2. Thema und Unterthema öffnen.
-3. Add file -> Upload files.
-4. Datei hochladen und Commit changes drücken.
-
-PDF / Bild / Video / einzelne HTML-Übung:
-Direkt in den passenden Unterthemenordner laden.
-
-Simulation mit mehreren Dateien:
-Eigenen Ordner anlegen. Die Startdatei muss index.html heißen.
-
+NAME ÄNDERN
+1. „Kursname ändern“ klicken.
+2. Das Wort durch TGE, TGEI oder einen anderen Namen ersetzen.
+3. „Commit changes“ klicken und bestätigen.
+Fertig: Der Name ändert sich auf der ganzen Kursseite.
+Die PDF-Inhalte und die Internetadresse bleiben erhalten.
 
 NEUEN ORDNER ANLEGEN
+1. „Ganz oben“ für eine Oberkategorie wählen.
+   Für einen Unterordner zum Beispiel „Kinematik“ wählen.
+2. Den neuen Namen eingeben, zum Beispiel „Freier Fall“.
+3. „Ordner auf GitHub anlegen“ klicken.
+4. „Commit changes“ klicken und bestätigen.
+Die kleine Datei ordner.txt ist bereits vorbereitet. Einfach so lassen.
 
-Beispiel:
-materialien/08 Quantenphysik/01 Grundlagen/
+PDF HOCHLADEN
+1. Bei „PDF hochladen“ den Zielordner wählen.
+2. „PDF auf GitHub hochladen“ klicken.
+3. Eine oder mehrere PDFs in das GitHub-Fenster ziehen.
+4. „Commit changes“ klicken.
+Fertig. Die PDFs erscheinen von allein auf der Kursseite.
 
-Die Nummer bestimmt die Reihenfolge und wird auf der Seite ausgeblendet.
-Für einen leeren Ordner eine Datei namens .gitkeep hinzufügen.
-Neue Ordner werden beim nächsten GitHub-Pages-Aufbau automatisch erkannt.
+Nach dem Speichern ein paar Minuten warten und die Kursseite neu laden.
+Für GitHub brauchst du dein Konto mit Schreibzugriff auf das Projekt.
 
+MIT EINEM BEFEHL IM PROJEKTORDNER
+Name ändern:       python3 kurs.py name TGE
+Ordner hinzufügen: python3 kurs.py ordner "03 Kinematik/05 Freier Fall"
+PDF hinzufügen:    python3 kurs.py pdf "Arbeitsblatt.pdf" "03 Kinematik/05 Freier Fall"
+Menü starten:      python3 kurs.py
 
-MATERIAL ODER LINK ENTFERNEN
-
-Datei, Simulationsordner oder Eintrag aus links.json löschen und committen.
-Der Eintrag verschwindet nach der automatischen Veröffentlichung.
-
-
-KLASSENARBEITEN
-
-Allgemeine Materialien:
-materialien/07 Klassenarbeiten/01 Materialsammlung/
-
-Frühere Klassenarbeiten und Probeklausuren:
-materialien/07 Klassenarbeiten/02 Klassenarbeitensammlung/
+Diese Befehle speichern auf deinem Computer. Danach die Änderungen mit
+GitHub Desktop oder git commit und git push hochladen.

@@ -10,6 +10,21 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 
+def valid_course_name(name: str) -> bool:
+    return (1 <= len(name) <= 40 and name[0].isalnum()
+            and all(char.isalnum() or char in ' _-' for char in name))
+
+
+def validate_course_name(path: Path) -> list[str]:
+    try:
+        name = path.read_text(encoding='utf-8').strip()
+    except OSError:
+        return [f'Datei fehlt oder ist nicht lesbar: {path}']
+    if not valid_course_name(name):
+        return [f'{path}: Bitte einen Namen mit 1–40 Buchstaben, Zahlen, Leerzeichen, _ oder - eintragen.']
+    return []
+
+
 def load_json(path: Path):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -133,6 +148,7 @@ def main() -> None:
     root = args.root.resolve()
 
     errors = []
+    errors.extend(validate_course_name(root / 'verwaltung' / 'kursname.txt'))
     errors.extend(validate_course(root / "verwaltung" / "kurs.json"))
     errors.extend(validate_announcements(root / "verwaltung" / "ankuendigungen.json"))
     errors.extend(validate_link_files(root))

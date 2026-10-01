@@ -20,7 +20,8 @@ def build_manifest(root: Path) -> list[dict[str, object]]:
     manifest: list[dict[str, object]] = []
 
     # Verzeichnisse werden ebenfalls gespeichert. So erscheinen neue oder noch
-    # leere Themenordner auf der Website, wenn darin eine .gitkeep-Datei liegt.
+    # leere Themenordner auf der Website. ordner.txt hält sie auch im
+    # GitHub-Pages-Build sichtbar; die Website blendet die Datei selbst aus.
     for path in sorted(material_root.rglob("*")):
         if any(part in IGNORED_DIRECTORY_NAMES for part in path.parts):
             continue

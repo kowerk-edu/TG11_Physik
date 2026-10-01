@@ -1,25 +1,17 @@
-# Materialien
+# Unterrichtsmaterialien
 
-Die Ordnerstruktur erzeugt automatisch die Navigation der Webseite.
+Nutze **Kurs verwalten** auf der Website. Wähle einen Zielordner und klicke auf
+**PDF auf GitHub hochladen**. Nach dem Speichern erscheint das Material automatisch.
 
-```text
-materialien/
-└── 08 Quantenphysik/       ← neues Thema
-    └── 01 Grundlagen/      ← neues Unterthema
-        ├── Arbeitsblatt.pdf
-        └── Simulation/
-            ├── index.html
-            ├── app.js
-            └── styles.css
-```
+Neue Ober- und Unterkategorien legst du dort über **Neuen Ordner anlegen** an.
+Die Datei `ordner.txt` hält einen leeren Ordner sichtbar. Sie wird auf der Kursseite
+nicht als Material angezeigt.
 
-Die Nummern am Anfang bestimmen die Reihenfolge und werden auf der Webseite
-nicht angezeigt. Ein Ordner darf weitere Unterordner enthalten.
+Ein Ordner entspricht einem Thema, zum Beispiel `03 Kinematik`.
+Darin können beliebig viele Unterordner liegen, etwa `05 Freier Fall`.
+Die führenden Zahlen legen die Reihenfolge fest und werden bei Unterordnern ausgeblendet.
+Ein verständlicher Dateiname wird automatisch zum Materialtitel.
 
-Leere Ordner werden von Git nicht gespeichert. Deshalb in einen zunächst leeren
-Ordner eine Datei namens `.gitkeep` legen.
-
-Nicht hier eintragen:
-
-- Ankündigungen: `verwaltung/ankuendigungen.json`
-- Kurstitel, Termine und Themenbilder: `verwaltung/kurs.json`
+Für eine Simulation mit mehreren Dateien einen eigenen Unterordner mit `index.html`
+anlegen. Die Hilfsdateien erscheinen nicht einzeln. Für externe Links `links.json`
+verwenden. Vorlagen und weitere Beispiele stehen in der [Anleitung](../README.md).

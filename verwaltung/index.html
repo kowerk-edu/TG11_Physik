@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de" data-title-template="{{KURS}} · Kurs verwalten">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kurs verwalten</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/verwaltung.css">
+  <script type="module" src="../assets/js/verwaltung.js"></script>
+</head>
+<body class="manage-page">
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a class="legal-back" href="../index.html">← Zurück zum Kurs</a>
+      <p class="eyebrow"><span data-course-name>Physik</span> · Für Lehrkräfte</p>
+      <h1>Kurs verwalten</h1>
+      <p>Name ändern, Ordner anlegen, PDFs bereitstellen. Wähle einfach aus, was du machen möchtest.</p>
+    </div>
+  </header>
+  <main class="manage-main">
+    <p class="manage-note">Änderungen speicherst du bei GitHub mit deinem Konto. Nur Personen mit Schreibzugriff können den Kurs ändern. Nach dem Speichern dauert es meist ein paar Minuten, bis die Kursseite aktuell ist.</p>
+    <p id="manageStatus" role="status" aria-live="polite">Die Ordner werden geladen …</p>
+    <div id="manageTools" hidden>
+      <section class="manage-card" aria-labelledby="uploadHeading">
+        <div class="manage-heading"><span class="manage-icon" aria-hidden="true">PDF</span><div><p class="eyebrow">Material bereitstellen</p><h2 id="uploadHeading">PDF hochladen</h2></div></div>
+        <ol class="simple-steps">
+          <li><label for="uploadFolder">Wohin soll die PDF?</label><select id="uploadFolder"></select></li>
+          <li><a class="button primary" id="uploadLink" target="_blank" rel="noopener">PDF auf GitHub hochladen ↗</a><p>Ziehe eine oder mehrere PDFs in das geöffnete Fenster. Oder klicke dort auf <strong>choose your files</strong> (Dateien auswählen).</p></li>
+          <li>Unten auf <strong>Commit changes</strong> (Änderungen speichern) klicken. Fertig!</li>
+        </ol>
+        <p class="manage-tip">Die PDF erscheint automatisch im gewählten Ordner. Du musst keinen Link und keinen Code ergänzen. Das geht auch mit Bildern, Videos und HTML-Übungen.</p>
+      </section>
+
+      <section class="manage-card" aria-labelledby="folderHeading">
+        <div class="manage-heading"><span class="manage-icon" aria-hidden="true">＋</span><div><p class="eyebrow">Themen ordnen</p><h2 id="folderHeading">Neuen Ordner anlegen</h2></div></div>
+        <ol class="simple-steps">
+          <li><label for="parentFolder">Wo soll der neue Ordner stehen?</label><select id="parentFolder"></select><p>Für eine Oberkategorie wählst du „Ganz oben“. Für eine Unterkategorie wählst du zum Beispiel „Kinematik“.</p></li>
+          <li><label for="folderName">Wie soll er heißen?</label><input id="folderName" type="text" placeholder="Zum Beispiel: Freier Fall" maxlength="80" autocomplete="off"><p id="folderPreview" role="status" aria-live="polite">Gib einen Namen ein.</p></li>
+          <li><a class="button primary" id="createFolderLink" target="_blank" rel="noopener" aria-disabled="true">Ordner auf GitHub anlegen ↗</a><p>Die kleine Platzhalterdatei ist schon vorbereitet. Auf GitHub auf <strong>Commit changes</strong> klicken und das Speichern bestätigen. Der Ordner erscheint danach im Kurs.</p></li>
+        </ol>
+        <p class="manage-tip">Neue Ordner werden automatisch hinten einsortiert. Nach dem Speichern kannst du diese Seite neu laden und den neuen Ordner für einen PDF-Upload auswählen.</p>
+      </section>
+
+      <section class="manage-card" aria-labelledby="nameHeading">
+        <div class="manage-heading"><span class="manage-icon" aria-hidden="true">Aa</span><div><p class="eyebrow">Ein Name für den ganzen Kurs</p><h2 id="nameHeading">Kurs umbenennen</h2></div></div>
+        <p>Aktueller Name: <strong data-course-name>Kurs</strong></p>
+        <ol class="simple-steps">
+          <li><a class="button primary" id="renameLink" target="_blank" rel="noopener">Kursname ändern ↗</a></li>
+          <li>Das vorhandene Wort durch den gewünschten Namen ersetzen, zum Beispiel <strong>TGE</strong> oder <strong>TGEI</strong>.</li>
+          <li>Auf <strong>Commit changes</strong> klicken und das Speichern bestätigen. Der Name wird auf der ganzen Kursseite übernommen.</li>
+        </ol>
+        <p class="manage-tip">Auch Kopfzeile, Begrüßung, Fußzeile und Impressum verwenden den neuen Namen. Der Text innerhalb bereits vorhandener PDFs bleibt erhalten.</p>
+      </section>
+
+      <section class="manage-card" aria-labelledby="moreHeading">
+        <h2 id="moreHeading">Weitere Änderungen</h2>
+        <div class="manage-links">
+          <a id="announcementLink" target="_blank" rel="noopener">Ankündigungen bearbeiten ↗</a>
+          <a id="guideLink" target="_blank" rel="noopener">Kurzanleitung öffnen ↗</a>
+        </div>
+      </section>
+    </div>
+    <noscript>Bitte JavaScript aktivieren oder die Anleitung im GitHub-Repository öffnen.</noscript>
+  </main>
+</body>
+</html>

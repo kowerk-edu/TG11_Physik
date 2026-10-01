@@ -6,8 +6,8 @@
   <meta name="description" content="Öffentliche Kursseite mit automatisch erkannten Materialien">
   <meta name="theme-color" content="#115ea3">
   <title>Kurs</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script type="module" src="assets/js/app.js?v=9"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=11">
+  <script type="module" src="assets/js/app.js?v=11"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -17,7 +17,7 @@
       <div class="brand">
         <div>
           <p class="eyebrow">Öffentlicher Kurs</p>
-          <h1 id="courseTitle">Moodle-Kurs</h1>
+          <h1 id="courseTitle">Physikkurs</h1>
         </div>
       </div>
       <div class="header-actions">
@@ -41,7 +41,7 @@
     <main id="main" class="main-content" tabindex="-1">
       <section class="hero" id="hero">
         <div>
-          <p class="eyebrow" id="heroEyebrow">TGM11 · Physik</p>
+          <p class="eyebrow" id="heroEyebrow">Physik</p>
           <h2 id="heroTitle">Alle Materialien an einem Ort</h2>
           <p id="heroText">Öffne Themen, PDFs, Übungen und Simulationen direkt im Browser.</p>
         </div>
@@ -59,6 +59,13 @@
         </div>
       </section>
 
+      <div class="course-toolbar">
+        <h2>Themen &amp; Materialien</h2>
+        <div class="course-toolbar-actions">
+          <button id="expandAll" class="text-button" type="button">Alle öffnen</button>
+          <button id="collapseAll" class="text-button" type="button">Alle schließen</button>
+        </div>
+      </div>
       <div id="searchStatus" class="search-status" role="status" aria-live="polite"></div>
       <section id="courseGrid" class="course-grid" aria-label="Kursbereiche"></section>
       <section id="emptySearch" class="empty-state" hidden>
@@ -70,7 +77,8 @@
   </div>
 
   <footer class="site-footer">
-    <span>Staatliche Feintechnikschule Villingen-Schwenningen · TGM11 Physik</span>
+    <span>Staatliche Feintechnikschule Villingen-Schwenningen · <span data-course-name>Kurs</span> Physik</span>
+    <a href="verwaltung/">Kurs verwalten</a>
     <a href="impressum.html">Impressum / Rechtliches</a>
   </footer>
 

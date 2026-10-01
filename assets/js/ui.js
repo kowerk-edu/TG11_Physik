@@ -13,6 +13,7 @@ import {
   isSafeLink,
   stripHtml
 } from "./utils.js";
+import { applyCourseName } from './branding.js';
 
 function iconFor(kind) {
   return ({
@@ -81,10 +82,11 @@ export function startCourseApp(data) {
   let lastFocused = null;
 
   document.title = `${data.course.title} · Kurs`;
+  applyCourseName(data.course.name);
   $("#courseTitle").textContent = data.course.title || "Physikkurs";
   $("#courseShortname").textContent = data.course.shortname || "Kurs";
   $("#courseCategory").textContent = data.course.category || "";
-  $("#heroEyebrow").textContent = data.hero.eyebrow || "TGM11 · Physik";
+  $("#heroEyebrow").textContent = data.hero.eyebrow || `${data.course.name} · Physik`;
   $("#heroTitle").textContent = data.hero.title || "Alle Materialien an einem Ort";
   $("#heroText").textContent = data.hero.text || "Öffne Themen, PDFs und Übungen direkt im Browser.";
 
@@ -244,7 +246,7 @@ export function startCourseApp(data) {
     if (!(item.items || []).length) {
       const empty = document.createElement("div");
       empty.className = "material empty-material";
-      empty.innerHTML = `<span class="item-icon" aria-hidden="true">·</span><span class="material-copy"><span class="material-title">Noch keine Materialien</span><span class="material-meta">Dateien in diesen Ordner unter materialien/ hochladen.</span></span>`;
+      empty.innerHTML = `<span class="item-icon" aria-hidden="true">·</span><span class="material-copy"><span class="material-title">Noch keine Materialien</span><span class="material-meta">Hier kommen bald neue Unterrichtsmaterialien hinzu.</span></span>`;
       items.append(empty);
     }
 
@@ -267,9 +269,11 @@ export function startCourseApp(data) {
     const parts = [];
     const announcements = (sectionData.announcements || []).length;
     const materials = countMaterials(sectionData.items || []);
+    const folders = (sectionData.items || []).filter(item => ['subsection', 'folder'].includes(item.type)).length;
     if (announcements) parts.push(announcementCountLabel(announcements));
+    if (folders) parts.push(folders === 1 ? '1 Unterordner' : `${folders} Unterordner`);
     if (materials) parts.push(materialCountLabel(materials));
-    return parts.join(" · ") || "Noch ohne Inhalte";
+    return parts.join(" · ") || (sectionData.summary ? 'Informationen zum Kurs' : 'Noch keine Materialien');
   }
 
   function renderSection(sectionData) {
@@ -282,6 +286,8 @@ export function startCourseApp(data) {
     const items = $(".section-items", fragment);
 
     article.id = `section-${sectionData.id}`;
+    content.id = `${article.id}-content`;
+    cover.setAttribute('aria-controls', content.id);
     article.dataset.search = sectionSearchText(sectionData);
     article.dataset.searchOwn = `${sectionData.title} ${stripHtml(sectionData.summary)}`.toLowerCase();
     article.classList.toggle("featured-section", sectionData.featured === true);
@@ -310,10 +316,10 @@ export function startCourseApp(data) {
     }
 
     (sectionData.items || []).forEach(item => items.append(createMaterial(item)));
-    if (!(sectionData.items || []).length && !(sectionData.announcements || []).length) {
+    if (!(sectionData.items || []).length && !(sectionData.announcements || []).length && !sectionData.summary) {
       const empty = document.createElement("div");
       empty.className = "material empty-material";
-      empty.innerHTML = `<span class="item-icon" aria-hidden="true">·</span><span class="material-copy"><span class="material-title">Noch keine Inhalte</span><span class="material-meta">Dateien in den passenden Themenordner unter materialien/ hochladen.</span></span>`;
+      empty.innerHTML = `<span class="item-icon" aria-hidden="true">·</span><span class="material-copy"><span class="material-title">Noch keine Materialien</span><span class="material-meta">Hier kommen bald neue Unterrichtsmaterialien hinzu.</span></span>`;
       items.append(empty);
     }
 
@@ -427,7 +433,7 @@ export function startCourseApp(data) {
   function showModal() {
     modal.hidden = false;
     document.body.classList.add("modal-open");
-    $("[data-close-modal]", modal).focus();
+    $("button[data-close-modal]", modal).focus();
   }
 
   function closeModal() {
@@ -482,6 +488,14 @@ export function startCourseApp(data) {
       stateBeforeSearch.set(toggle, toggle.getAttribute("aria-expanded") === "true");
     });
   }
+
+  function expandAll(expanded) {
+    searchInput.value = '';
+    resetSearchDisplay();
+    $$('button[aria-expanded]', grid).forEach(toggle => setSearchExpanded(toggle, expanded));
+  }
+  $('#expandAll').addEventListener('click', () => expandAll(true));
+  $('#collapseAll').addEventListener('click', () => expandAll(false));
 
   function restoreOpenState() {
     if (!stateBeforeSearch) return;

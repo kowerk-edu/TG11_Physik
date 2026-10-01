@@ -1,0 +1,19 @@
+.manage-main { width: min(900px, calc(100% - 32px)); margin: 24px auto 64px; }
+.manage-note { color: var(--muted); font-size: .94rem; }
+.manage-card { margin-top: 20px; padding: clamp(20px, 4vw, 32px); border: 1px solid var(--border); border-radius: 18px; background: white; }
+.manage-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.manage-heading h2, .manage-card > h2 { margin: 0; font-size: 1.4rem; line-height: 1.3; }
+.manage-icon { width: 48px; height: 48px; flex: none; display: grid; place-items: center; border-radius: 12px; color: var(--blue-dark); background: var(--blue-soft); font-weight: 800; }
+.simple-steps { margin: 0; padding-left: 26px; }
+.simple-steps > li { padding-left: 6px; margin-top: 18px; }
+.simple-steps > li::marker { color: var(--blue); font-weight: 800; }
+.simple-steps p { margin: 8px 0 0; color: var(--muted); font-size: .92rem; }
+.simple-steps label { display: block; margin-bottom: 8px; font-weight: 700; }
+.manage-page select, .manage-page input { width: 100%; max-width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #b4c1d1; border-radius: 9px; color: var(--ink); background: white; font: inherit; }
+.button.primary { color: white; background: var(--blue); padding: 11px 16px; }
+.button.primary:hover { background: var(--blue-dark); }
+a[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
+.manage-tip { margin: 22px 0 0; padding: 14px; border-radius: 10px; background: var(--blue-soft); font-size: .9rem; }
+.manage-links { margin-top: 16px; display: flex; gap: 18px; flex-wrap: wrap; }
+#folderPreview { overflow-wrap: anywhere; }
+@media (max-width: 480px) { .manage-card { padding: 18px 14px; } .button.primary { font-size: .9rem; } }

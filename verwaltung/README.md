@@ -1,46 +1,31 @@
 # Kurs verwalten
 
-In diesem Ordner liegen nur die Inhalte, die regelmäßig geändert werden.
-Der Programmcode liegt getrennt unter `assets/js/`.
+Am einfachsten geht es über die [Verwaltungsseite](https://kowerk-edu.github.io/TG11_Physik/verwaltung/).
+Dort gibt es drei Aufgaben: **PDF hochladen**, **Ordner anlegen** und **Kurs umbenennen**.
+
+- `kursname.txt`: Der einzige Ort für den Kursnamen. Ein Wort, zum Beispiel TGE.
+- `kurs.json`: Begrüßung, Termine und Bilder. `{{KURS}}` setzt den aktuellen Namen ein.
+- `ankuendigungen.json`: Aktuelle Meldungen.
+
+Neue Ordner und PDFs brauchen keine Einträge in JSON-Dateien.
+Die vollständige Anleitung steht in [README.md](../README.md).
 
 ## Ankündigung eintragen
 
-Datei `ankuendigungen.json` öffnen und den Beispielblock kopieren.
-Zwischen zwei Blöcken muss ein Komma stehen.
+In `ankuendigungen.json` einen vorhandenen Block kopieren, ein Komma zwischen die
+Blöcke setzen und die Angaben ändern:
 
 ```json
 {
   "active": true,
-  "title": "Klassenarbeit verschoben",
-  "date": "2026-11-03",
-  "text": "Die Klassenarbeit findet eine Woche später statt.",
-  "important": true,
+  "title": "Neue Hausaufgabe für {{KURS}}",
+  "date": "2026-10-05",
+  "text": "Bitte Aufgabe 3 bis Freitag bearbeiten.",
+  "important": false,
   "link": "",
   "linkText": "Mehr erfahren"
 }
 ```
 
-- `active`: `true` zeigt die Meldung an, `false` blendet sie aus.
-- `date`: immer im Format `JJJJ-MM-TT` eintragen.
-- `important`: `true` hebt die Meldung stärker hervor.
-- `link`: optionaler Weblink. Ohne Link einfach leer lassen.
-
-Die neuesten Ankündigungen stehen automatisch oben.
-Zum Löschen den vollständigen Block aus der Datei entfernen.
-
-## Kurstitel oder Themenbilder ändern
-
-Diese Angaben stehen in `kurs.json`.
-Neue Themen müssen dort nicht eingetragen werden: Ein neuer Ordner unter
-`materialien/` reicht aus. `kurs.json` wird nur für feste Titel, Begrüßung,
-Termine und Themenbilder verwendet.
-
-## Breite übergeordnete Kachel
-
-In `kurs.json` sorgt `"featured": true` dafür, dass eine Kachel die gesamte
-Breite einnimmt. Ohne weitere Angabe steht sie ganz oben. Mit
-`"featuredPosition": "bottom"` steht sie ganz unten.
-
-Bei **Aktuelles** ist die obere breite Kachel aktiviert. **Klassenarbeiten**
-ist als breite Kachel am Seitenende eingerichtet. Beide bleiben auf- und
-zuklappbar.
+`active: false` blendet eine Meldung aus. `important: true` hebt sie hervor.
+Das Datum hat immer das Format JJJJ-MM-TT. Die neuesten Meldungen stehen oben.

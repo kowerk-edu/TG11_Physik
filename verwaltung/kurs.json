@@ -1,11 +1,11 @@
 {
   "course": {
-    "title": "TGM11-Ph-(26-27)",
-    "shortname": "TGM11PH",
-    "category": "TGM11"
+    "title": "{{KURS}}-Ph-(26-27)",
+    "shortname": "{{KURS}}PH",
+    "category": "{{KURS}}"
   },
   "hero": {
-    "eyebrow": "TGM11 · Physik",
+    "eyebrow": "{{KURS}} · Physik",
     "title": "Alle Materialien an einem Ort",
     "text": "Öffne Themen, PDFs, Übungen und Simulationen direkt im Browser."
   },
@@ -13,7 +13,7 @@
     {
       "number": 0,
       "title": "Aktuelles",
-      "summary": "<h4><strong>Herzlich willkommen im Physikunterricht der TGM11</strong></h4><p>Hier findest du alle PDFs, Übungen, Simulationen und weiteren Kursmaterialien direkt im Browser.</p>",
+      "summary": "<h4><strong>Herzlich willkommen im Physikunterricht der {{KURS}}</strong></h4><p>Hier findest du alle PDFs, Übungen, Simulationen und weiteren Kursmaterialien direkt im Browser.</p>",
       "image": "",
       "featured": true
     },
@@ -63,5 +63,10 @@
       "featured": true,
       "featuredPosition": "bottom"
     }
-  ]
+  ],
+  "repository": {
+    "owner": "kowerk-edu",
+    "name": "TG11_Physik",
+    "branch": "main"
+  }
 }

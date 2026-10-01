@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TGM11 Physik – Vier-Felder-Zuordnung</title>
+  <title>Physik – Vier-Felder-Zuordnung</title>
+  <script type="module">
+    import { loadCourseName } from '../../../assets/js/branding.js';
+    loadCourseName().then(name => { document.title = `${name} Physik – Vier-Felder-Zuordnung`; }).catch(console.error);
+  </script>
   <style>
     :root {
       --petrol: #005351;

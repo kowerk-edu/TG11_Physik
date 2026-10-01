@@ -3,8 +3,8 @@
  * Kursdaten laden -> Oberfläche starten.
  */
 
-import { loadCourseData } from "./data.js";
-import { startCourseApp } from "./ui.js?v=10";
+import { loadCourseData } from "./data.js?v=11";
+import { startCourseApp } from "./ui.js?v=11";
 
 async function main() {
   try {

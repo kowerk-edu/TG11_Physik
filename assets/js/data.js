@@ -13,14 +13,18 @@ import {
   parseFolderLabel,
   slug
 } from "./utils.js";
+import { loadCourseName, brandCourse } from "./branding.js";
 
+const ROOT_URL = new URL('../../', import.meta.url);
 const CONFIG_URL = "verwaltung/kurs.json";
 const ANNOUNCEMENTS_URL = "verwaltung/ankuendigungen.json";
-const MANIFEST_URLS = ["data/material-files-auto.json", "data/material-files.json"];
-const IGNORED_FILES = new Set([".gitkeep", "thumbs.db", "desktop.ini", "readme.md", "anleitung.md"]);
+// GitHub Pages erzeugt die erste Liste bei jedem Upload selbst. Die weiteren
+// Listen sind für lokale Vorschauen ohne Jekyll vorgesehen.
+const MANIFEST_URLS = ["data/materialien.json", "data/material-files-auto.json", "data/material-files.json"];
+const IGNORED_FILES = new Set([".gitkeep", "ordner.txt", "thumbs.db", "desktop.ini", "readme.md", "anleitung.md"]);
 
 async function loadJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
+  const response = await fetch(new URL(url, ROOT_URL), { cache: "no-store" });
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   return response.json();
 }
@@ -31,7 +35,8 @@ async function loadFirstAvailableJson(urls, fallback = []) {
       const value = await loadJson(url);
       if (Array.isArray(value)) return value;
     } catch (error) {
-      console.info(`${url} konnte nicht geladen werden.`, error);
+      // Ein einfacher lokaler Webserver verarbeitet die Jekyll-Vorlage nicht.
+      if (url !== MANIFEST_URLS[0]) console.info(`${url} konnte nicht geladen werden.`, error);
     }
   }
   return fallback;
@@ -68,7 +73,7 @@ function manifestFile(entry) {
 }
 
 function parseManifest(manifest) {
-  return manifest
+  const entries = manifest
     .map(entry => {
       if (!entry || typeof entry.path !== "string") return null;
       if (entry.type === "directory") {
@@ -77,8 +82,28 @@ function parseManifest(manifest) {
       return manifestFile(entry);
     })
     .filter(Boolean)
-    .filter(entry => entry.path.startsWith("materialien/"))
+    .filter(entry => entry.path.startsWith("materialien/") && !entry.path.split('/').includes('..'));
+  // Die Pages-Liste enthält Dateien. Auch aus ordner.txt entstehen die
+  // übergeordneten Ordner; die Platzhalterdatei selbst wird nicht angezeigt.
+  const directories = new Set(entries.filter(entry => entry.type === 'directory').map(entry => entry.path));
+  entries.filter(entry => entry.type === 'file').forEach(entry => {
+    const parts = entry.path.split('/');
+    for (let i = 2; i < parts.length; i += 1) directories.add(parts.slice(0, i).join('/'));
+  });
+  return [...entries.filter(entry => entry.type === 'file'), ...[...directories].map(path => ({ type: 'directory', path }))]
     .sort((a, b) => a.path.localeCompare(b.path, "de", { numeric: true }));
+}
+
+export function materialDirectories(manifest) {
+  const entries = parseManifest(manifest);
+  const packages = entries.filter(entry => entry.type === 'file' && /^index\.html?$/i.test(entry.filename))
+    .map(entry => directoryName(entry.path)).filter(path => path.split('/').length >= 4);
+  return entries.filter(entry => entry.type === 'directory' && !packages.some(root => entry.path === root || entry.path.startsWith(root + '/')))
+    .map(entry => entry.path);
+}
+
+export function loadMaterialManifest() {
+  return loadFirstAvailableJson(MANIFEST_URLS, []);
 }
 
 function ensureSection(data, segment) {
@@ -294,14 +319,15 @@ export async function buildCourse(config, announcementEntries, rawManifest) {
 }
 
 export async function loadCourseData() {
-  const [config, announcements, manifest] = await Promise.all([
+  const [config, announcements, manifest, name] = await Promise.all([
     loadJson(CONFIG_URL),
     loadJson(ANNOUNCEMENTS_URL).catch(error => {
       console.warn("Ankündigungen konnten nicht geladen werden.", error);
       return [];
     }),
-    loadFirstAvailableJson(MANIFEST_URLS, [])
+    loadMaterialManifest(),
+    loadCourseName()
   ]);
 
-  return buildCourse(config, announcements, manifest);
+  return brandCourse(await buildCourse(config, announcements, manifest), name);
 }

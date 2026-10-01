@@ -1,0 +1,10 @@
+---
+layout: null
+---
+{%- assign files = site.static_files | where_exp: "file", "file.path contains '/materialien/'" -%}
+[
+{%- for file in files -%}
+  {"type":"file","path":{{ file.path | remove_first: '/' | jsonify }},"filename":{{ file.name | jsonify }}}
+  {%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+]
