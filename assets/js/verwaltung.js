@@ -1,5 +1,5 @@
 import { loadCourseName, applyCourseName } from './branding.js';
-import { loadMaterialManifest, materialDirectories } from './data.js';
+import { loadMaterialManifest, materialDirectories } from './data.js?v=11';
 import { normalizeTitle, parseFolderLabel } from './utils.js';
 
 const $ = selector => document.querySelector(selector);
